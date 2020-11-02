@@ -12,11 +12,10 @@ steps:
   args: ['test']
   env: ['GOPATH=/go/src']
 
-- id: "Build imagem Dockerfile"
-  name: 'gcr.io/cloud-builders/docker' 
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/app-golang:$SHORT_SHA', '-f', 'Dockerfile', '.']
+# - id: "Build imagem Dockerfile"
+#   name: 'gcr.io/cloud-builders/docker' 
+#   args: ['build', '-t', 'gcr.io/$PROJECT_ID/app-golang:$SHORT_SHA', '-f', 'Dockerfile', '.']
 
-
-- id: "Push imagem Docker"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/app-golang:$SHORT_SHA']
+# - id: "Push imagem Docker"
+#   name: 'gcr.io/cloud-builders/docker'
+#   args: ['push', 'gcr.io/$PROJECT_ID/app-golang:$SHORT_SHA']
