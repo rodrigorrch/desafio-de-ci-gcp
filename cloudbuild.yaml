@@ -3,6 +3,7 @@ steps:
 - id: "Rodando Testes"
   name: 'gcr.io/cloud-builders/go'
   args: ['test', '.', '-v']
+  env: ['PROJECT_ROOT=desafio-de-ci-gcp']
 
 - id: "Criando Imagem no Container Registry"
   name: 'gcr.io/cloud-builders/docker'
@@ -15,6 +16,7 @@ steps:
   - '-t'
   - 'gcr.io/$PROJECT_ID/soma:1.0'
   - '.'
+  env: ['PROJECT_ROOT=desafio-de-ci-gcp']
 
 images:
 - 'gcr.io/$PROJECT_ID/soma:latest'
