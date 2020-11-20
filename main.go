@@ -2,13 +2,12 @@ package main
 
 import "fmt"
 
-func sum(value_a int, value_b int) int {
-	result := value_a + value_b
-	return result
+func Sum(x int, y int) int {
+	return x + y
 }
 
 func main() {
 	value_a := 5
 	value_b := 5
-	fmt.Printf("%d \n", sum(value_a, value_b))
+	fmt.Printf("%d \n", Sum(value_a, value_b))
 }
