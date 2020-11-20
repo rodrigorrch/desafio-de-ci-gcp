@@ -1,9 +1,5 @@
 steps:
 
-- id: "Rodando Testes"
-  name: 'gcr.io/cloud-builders/go'
-  args: ['test', './', '-v']
-
 - id: "Criando Imagem no Container Registry"
   name: 'gcr.io/cloud-builders/docker'
   args:
